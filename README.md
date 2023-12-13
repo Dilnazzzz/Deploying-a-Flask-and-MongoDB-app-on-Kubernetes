@@ -7,6 +7,7 @@ Run the command chmod +x [NAME OF FILE] to make shell files executable. For exam
 Then you can run the shell files by using ./ as a prefix to the file. For example, ./setup_kubernetes.sh
 
 To view the landing page: 
+
 dilnazbaltabayeva@Dilnazs-Air tasksapp-python % curl 10.99.210.99:8080
 
 {
