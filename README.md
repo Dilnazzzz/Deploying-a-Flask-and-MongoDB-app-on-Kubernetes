@@ -6,6 +6,7 @@ This repository includes scripts that run a Flask and MongoDB app on Kubernetes.
 Run the command chmod +x [NAME OF FILE] to make shell files executable. For example, chmod +x setup_kubernetes.sh
 Then you can run the shell files by using ./ as a prefix to the file. For example, ./setup_kubernetes.sh
 
+### Making queries using curl: 
 To view the landing page: 
 
 dilnazbaltabayeva@Dilnazs-Air tasksapp-python % curl 10.99.210.99:8080
