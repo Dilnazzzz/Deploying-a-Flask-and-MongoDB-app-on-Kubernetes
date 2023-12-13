@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hpa-scale
+spec:
+  selector:
+    matchLabels:
+      run: hpa-scale
+  template:
+    metadata:
+      labels:
+        run: hpa-scale
+    spec:
+      containers:
+      - name: hpa-scale
+        image: dilnazbaltabayeva/tasksapp-python:1.0.0
+        ports:
+        - containerPort: 80
+        resources:
+          limits:
+            cpu: 500m
+          requests:
+            cpu: 200m
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: hpa-scale
+  labels:
+    run: hpa-scale
+spec:
+  ports:
+  - port: 80
+  selector:
+    run: hpa-scale
