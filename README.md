@@ -11,14 +11,17 @@ dilnazbaltabayeva@Dilnazs-Air tasksapp-python % curl 10.99.210.99:8080
 {
   "message": "Welcome to Anonymous Message Board! I am running inside ed3c464481dc pod!"
 }
+
 dilnazbaltabayeva@Dilnazs-Air tasksapp-python % curl 10.99.210.99:8080/tasks
 {
   "data": []
 }
+
 dilnazbaltabayeva@Dilnazs-Air tasksapp-python % curl -X POST -d "{\"message\": \"Message 1\"}" http://10.99.210.99:8080/message
 {
   "message": "Task saved successfully!"
 }
+
 dilnazbaltabayeva@Dilnazs-Air tasksapp-python % curl 10.99.210.99:8080/messsages
 {
   "data": [
@@ -28,6 +31,7 @@ dilnazbaltabayeva@Dilnazs-Air tasksapp-python % curl 10.99.210.99:8080/messsages
     }
   ]
 }
+
 myuser@master1:~$ curl -X PUT -d "{\"message\": \"Message 1 Updated\"}" http://10.99.210.99:8080/message/5ef8bce7df44b8194ee30c9a
 {
   "message": "Message updated successfully!"
